@@ -1,0 +1,12 @@
+C:\Users\sujon.sarder\source\repos\Test\GymManagement.DTO\bin\Debug\net8.0\GymManagement.DTO.deps.json
+C:\Users\sujon.sarder\source\repos\Test\GymManagement.DTO\bin\Debug\net8.0\GymManagement.DTO.dll
+C:\Users\sujon.sarder\source\repos\Test\GymManagement.DTO\bin\Debug\net8.0\GymManagement.DTO.pdb
+C:\Users\sujon.sarder\source\repos\Test\GymManagement.DTO\obj\Debug\net8.0\GymManagement.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sujon.sarder\source\repos\Test\GymManagement.DTO\obj\Debug\net8.0\GymManagement.DTO.AssemblyInfoInputs.cache
+C:\Users\sujon.sarder\source\repos\Test\GymManagement.DTO\obj\Debug\net8.0\GymManagement.DTO.AssemblyInfo.cs
+C:\Users\sujon.sarder\source\repos\Test\GymManagement.DTO\obj\Debug\net8.0\GymManagement.DTO.csproj.CoreCompileInputs.cache
+C:\Users\sujon.sarder\source\repos\Test\GymManagement.DTO\obj\Debug\net8.0\GymManagement.DTO.sourcelink.json
+C:\Users\sujon.sarder\source\repos\Test\GymManagement.DTO\obj\Debug\net8.0\GymManagement.DTO.dll
+C:\Users\sujon.sarder\source\repos\Test\GymManagement.DTO\obj\Debug\net8.0\refint\GymManagement.DTO.dll
+C:\Users\sujon.sarder\source\repos\Test\GymManagement.DTO\obj\Debug\net8.0\GymManagement.DTO.pdb
+C:\Users\sujon.sarder\source\repos\Test\GymManagement.DTO\obj\Debug\net8.0\ref\GymManagement.DTO.dll

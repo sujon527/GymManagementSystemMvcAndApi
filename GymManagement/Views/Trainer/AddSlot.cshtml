@@ -1,0 +1,74 @@
+﻿
+@model GymManagement.DTO.SlotDTO
+@* @model IEnumerable<GymManagement.DTO.SlotDTO> *@
+
+@{
+    ViewData["Title"] = "Add Slot";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Add Slot</h2>
+
+    <form asp-action="AddSlot" method="post">
+       @*  <input type="hidden" asp-for="TrainerId" /> *@
+        <input type="hidden" asp-for="SlotId" />
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group mb-3">
+                    <label asp-for="SlotName" class="form-label">Slot Name</label>
+                    <input asp-for="SlotName" class="form-control" placeholder="Enter Slot Name" />
+                    <span asp-validation-for="SlotName" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="SlotTime" class="form-label">Slot Time</label>
+                    <input asp-for="SlotTime" class="form-control" type="time" />
+                    <span asp-validation-for="SlotTime" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="ClassesIncluded" class="form-label">Classes Included</label>
+                    <input asp-for="ClassesIncluded" class="form-control" placeholder="Enter Classes Included" />
+                    <span asp-validation-for="ClassesIncluded" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="TrainerId" class="form-label">Trainer</label>
+                    <select asp-for="TrainerId" class="form-select" asp-items="@(ViewBag.Trainers)" onchange="updateTrainerName()">
+                        <option value="">-- Select Trainer --</option>
+                    </select>
+                   @*  <select asp-for="TrainerId" class="form-label" asp-items="@(ViewBag.Trainers)">
+                        <option value="">-- Select Trainer --</option>
+                        @foreach (var trainer in ViewBag.Trainers)
+                        {
+                            <option value="@trainer.Value">@trainer.Text</option>
+                        }
+                    </select> *@
+                    <span asp-validation-for="TrainerId" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="TrainerName" class="form-label">Trainer Name</label>
+                    <input asp-for="TrainerName" id="TrainerName" class="form-control" readonly />
+                    <span asp-validation-for="TrainerName" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-4">
+                    <div class="form-check">
+                        <input asp-for="IsBooked" class="form-check-input" type="checkbox" />
+                        <label asp-for="IsBooked" class="form-check-label">Is Booked</label>
+                    </div>
+                    <span asp-validation-for="IsBooked" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Add Slot" class="btn btn-primary btn-lg" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        function updateTrainerName() {
+            var trainerDropdown = document.querySelector('select[name="TrainerId"]');
+            var selectedTrainer = trainerDropdown.options[trainerDropdown.selectedIndex].text;
+            document.getElementById('TrainerName').value = selectedTrainer;
+        }
+    </script>
+}

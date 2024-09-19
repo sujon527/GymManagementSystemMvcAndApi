@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GymManagement.Agregateroot\GymManagement.Agregateroot.csproj" />
+    <ProjectReference Include="..\GymManagement.DTO\GymManagement.DTO.csproj" />
+    <ProjectReference Include="..\GymManagement.Repository\GymManagement.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

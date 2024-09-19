@@ -1,0 +1,57 @@
+﻿
+
+ @model GymManagement.DTO.SlotDTO
+
+@{
+    ViewData["Title"] = "Update Slot";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Update Slot</h2>
+
+    <form asp-action="UpdateSlot" method="post">
+        <input type="hidden" asp-for="SlotId" />
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group mb-3">
+                    <label asp-for="SlotName" class="form-label">Slot Name</label>
+                    <input asp-for="SlotName" class="form-control" placeholder="Enter Slot Name" />
+                    <span asp-validation-for="SlotName" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="SlotTime" class="form-label">Slot Time</label>
+                    <input asp-for="SlotTime" class="form-control" type="time" />
+                    <span asp-validation-for="SlotTime" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="ClassesIncluded" class="form-label">Classes Included</label>
+                    <input asp-for="ClassesIncluded" class="form-control" placeholder="Enter Classes Included" />
+                    <span asp-validation-for="ClassesIncluded" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="form-check">
+                        <input asp-for="IsBooked" class="form-check-input" type="checkbox" />
+                        <label asp-for="IsBooked" class="form-check-label">Is Booked</label>
+                    </div>
+                    <span asp-validation-for="IsBooked" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="TrainerId" class="form-label">Trainer</label>
+                    <select asp-for="TrainerId" class="form-select" asp-items="@(ViewBag.Trainers)">
+                        <option value="">-- Select Trainer --</option>
+                    </select>
+                    <span asp-validation-for="TrainerId" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="TrainerName" class="form-label">Trainer Name</label>
+                    <input asp-for="TrainerName" id="TrainerName" class="form-control" readonly />
+                    <span asp-validation-for="TrainerName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save Changes" class="btn btn-success btn-lg" />
+                    <a asp-action="ManageSlots" class="btn btn-secondary btn-lg ms-2">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
